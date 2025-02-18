@@ -1,0 +1,58 @@
+.table-user{
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+}
+
+h2{
+    color: #0066a7;
+}
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;   
+}
+
+input{
+    height: 37px;
+    margin-right: 5px;
+
+}
+.btn-success{
+    color: white !important;
+    background-color: rgb(102, 199, 5) !important;
+    border-radius: 25px !important;
+   
+}
+
+table .btn{
+    width: 120px !important;
+    
+}
+
+.modal-body {
+  margin: auto !important;
+}
+
+.modal-body img{
+  margin-left: 120px !important;
+  }
+
+.modal-footer{
+    margin: auto !important;
+}
+
+.modal-footer .yes-btn{
+    background-color: #0066a7 !important;
+    border-color: #0066a7 !important;
+    color: white !important;
+}
+
+.modal-footer .no-btn{
+    background-color: white !important;
+    color: #0066a7 !important;
+    border-color: #0066a7 !important;
+}
