@@ -1,79 +1,50 @@
 package pizzashopProject.model;
 
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "users")  // Ensure this matches the database table name
 public class Users {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	private String name;
-	private String description;
-	private long price;
-	
-	
-	public Users(int id, String name, String description, long price) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.price = price;
-	}
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+    @Column(name = "username", nullable = false, unique = true)
+    private String username;
 
-	public Users() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+    @Column(name = "password", nullable = false)
+    private String password;
 
+    // Constructors, Getters, and Setters
+    public Users() {}
 
-	public int getId() {
-		return id;
-	}
+    public Users(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
+    public Long getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public String getUsername() {
+        return username;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
+    public String getPassword() {
+        return password;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-
-	public String getDescription() {
-		return description;
-	}
-
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-
-	public long getPrice() {
-		return price;
-	}
-
-
-	public void setPrice(long price) {
-		this.price = price;
-	}
-	
-	
-	
-	
-	
-	
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
